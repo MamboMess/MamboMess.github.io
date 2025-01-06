@@ -11,7 +11,7 @@
 	<h1>Upload</h1>
 	<input type="file" id="fileInput" />
 	<div id="demo">
-	  demo
+	  demo -update
 	</div>
     <script>
         document.getElementById('fileInput')
@@ -24,7 +24,7 @@
                     console.log(content);
     document.getElementById("demo").innerHTML = content;
     let p = JSON.parse(content);
-    document.getElementById("demo").innerHTML = p["name"];
+    document.getElementById("demo").innerHTML = p.data;
     
                 };
   
