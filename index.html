@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js"></script>
+  <title>Upload</title>
+</head>
+<body>
+	<h1>Upload</h1>
+	<input type="file" id="fileInput" />
+	<div id="demo">
+	  demo
+	</div>
+    <script>
+        document.getElementById('fileInput')
+            .addEventListener('change', (event) => {
+                const file = event.target.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function () {
+                  const content = reader.result;
+                    console.log(content);
+    document.getElementById("demo").innerHTML = content;
+    let p = JSON.parse(content);
+    document.getElementById("demo").innerHTML = p["key"];
+    
+                };
+  
+  
+
+                reader.onerror = function () {
+                    console.error('Error reading the file');
+                };
+
+                reader.readAsText(file, 'utf-8');
+            });
+            </script>
+</body>
+</html>
