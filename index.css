@@ -21,7 +21,7 @@
 }
 
 a:link, a:visited {
-  color: hotpink
+  color: hotpink;
   text-decoration: none;
-    padding: 1em 1.5em;
+  padding: 1em 1.5em;
 }
