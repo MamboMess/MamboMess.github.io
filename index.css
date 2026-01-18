@@ -1,6 +1,5 @@
 .butt {
   display: block;
-  padding: 1em 1.5em;
   text-align: center;
   font-size: 2.5em;
   border: 2px solid hotpink;
@@ -24,4 +23,5 @@
 a:link, a:visited {
   color: hotpink
   text-decoration: none;
+    padding: 1em 1.5em;
 }
